@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="vi"> <head>
+<meta name="msvalidate.01" content="5CCC6EE8FF816477D80A4DE459A738F1" />
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Naver Video Downloader: Bạn có thể sử dụng trình tải video Naver của chúng tôi để tải xuống bất kỳ video hoặc GIF nào và chuyển đổi sang định dạng MP3 hoặc GIF. Bạn còn chờ gì nữa? Thử ngay trình tải video Naver của chúng tôi!">
+<meta name="keywords" content="Naver Video Downloader, tải video Naver, trình tải GIF Naver, tải clip Naver">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twittervideodownloaderx.com">
+<meta name="twitter:title" content="Naver Video Downloader — Tải Video và GIF từ Naver">
+<meta name="twitter:description" content="Naver Video Downloader: Công cụ giúp bạn tải xuống bất kỳ video hoặc GIF nào từ Naver và chuyển đổi sang định dạng MP3 hoặc GIF dễ dàng. Thử ngay!">
+<meta name="twitter:image" content="https://twittervideodownloaderx.com/static/logo.png">
+<meta name="twitter:image:alt" content="Naver Video Downloader — Tải Video và GIF từ Naver">
+
+<meta property="og:title" content="Naver Video Downloader — Tải Video và GIF từ Naver" />
+<meta property="og:description" content="Naver Video Downloader: Sử dụng trình tải video của chúng tôi để tải video hoặc GIF từ Naver và chuyển đổi sang MP3/GIF. Nhanh chóng và miễn phí!" />
+<meta property="og:image" content="https://twittervideodownloaderx.com/static/logo.png" />
+<meta property="og:image:alt" content="Naver Video Downloader — Tải Video và GIF từ Naver" />
+
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+<link href="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/wait.css" >
+<link rel="stylesheet" href="/static/shareon.min.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+{{websiteSchema|safe}}
+
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<title>Naver Video Downloader — Tải Video và GIF từ Naver</title>
+</head>
+
+
+<body>
+
+
+
+	<style>
+		:root {
+		--primary: #03c75a;
+		--secondary: #108740;
+		--dark: #2c3e50;
+		--light: #f8f9fa;
+		--gray: #6c757d;
+		--border-radius: 8px;
+		--box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		--transition: all 0.3s ease;
+		}
+	
+		* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		}
+		
+		body {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		line-height: 1.6;
+		color: #333;
+		background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+		padding-bottom: 50px;
+		}
+		
+		.container {
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 15px;
+		}
+	
+	
+		.logo {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
+		}
+		
+		.logo i {
+		color: white;
+		}
+		
+		.tagline {
+		font-size: 1.2rem;
+		opacity: 0.9;
+		max-width: 700px;
+		margin: 0 auto;
+		}
+	
+
+	
+		.hero-content {
+		position: relative;
+		
+		text-align: center;
+		max-width: 800px;
+		padding: 0 20px;
+		}
+		
+		
+		.card {
+		background: white;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+		padding: 2rem;
+		margin: 2rem 0;
+		transition: var(--transition);
+		}
+	
+		.card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+		}
+		
+		.card-header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 2px solid #eee;
+		}
+		
+		.card-header i {
+		font-size: 2rem;
+		color: var(--primary);
+		margin-right: 15px;
+		}
+		
+		.card h2 {
+		font-size: 1.8rem;
+		color: var(--dark);
+		}
+	
+		.features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 20px;
+		margin: 1.5rem 0;
+		}
+		
+		.feature-item {
+		background: #f0fdf4;
+		padding: 1.5rem;
+		border-radius: var(--border-radius);
+		border-left: 4px solid var(--primary);
+		transition: var(--transition);
+		}
+		
+		.feature-item:hover {
+		background: #e6f7ed;
+		transform: translateX(5px);
+		}
+	
+		.feature-item h3 {
+		color: var(--secondary);
+		margin-bottom: 0.5rem;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		}
+		
+		.tutorial-steps {
+		counter-reset: step-counter;
+		margin: 1.5rem 0;
+		}
+		
+		.step {
+		position: relative;
+		padding: 1.5rem 1.5rem 1.5rem 4rem;
+		margin-bottom: 1.5rem;
+		border-radius: var(--border-radius);
+		background: #f0fdf4;
+		border: 1px solid #bbf7d0;
+		transition: var(--transition);
+		}
+	
+		.step:hover {
+		border-color: var(--primary);
+		transform: translateX(5px);
+		}
+		
+		.step::before {
+		counter-increment: step-counter;
+		content: counter(step-counter);
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		width: 30px;
+		height: 30px;
+		background: var(--primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		font-size: 0.9rem;
+		}
+	
+		.step h3 {
+		color: var(--dark);
+		margin-bottom: 0.75rem;
+		}
+		
+		.step-img {
+		width: 100%;
+		max-width: 600px;
+		border-radius: var(--border-radius);
+		margin: 1rem auto;
+		display: block;
+		border: 2px solid #bbf7d0;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		}
+		
+		.warning {
+		background: #fff8e1;
+		border-left: 4px solid #ffc107;
+		padding: 1.5rem;
+		border-radius: 0 var(--border-radius) var(--border-radius) 0;
+		margin: 1.5rem 0;
+		}
+	
+			.warning h3 {
+			color: #856404;
+			margin-bottom: 0.5rem;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			}
+			
+			.download-box {
+			background: linear-gradient(135deg, var(--secondary), #0b5a30);
+			color: white;
+			border-radius: var(--border-radius);
+			padding: 2rem;
+			text-align: center;
+			margin: 2rem 0;
+			box-shadow: 0 10px 30px rgba(3, 199, 90, 0.3);
+			}
+	
+		.download-btn {
+		display: inline-block;
+		background: white;
+		color: var(--secondary);
+		font-size: 1.2rem;
+		font-weight: 600;
+		padding: 12px 35px;
+		border-radius: 50px;
+		text-decoration: none;
+		margin-top: 1rem;
+		transition: var(--transition);
+		border: none;
+		cursor: pointer;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		}
+		
+		.download-btn:hover {
+		background: #f0fdf4;
+		transform: translateY(-3px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+		}
+	
+		.faq {
+		margin: 2rem 0;
+		}
+		
+		.faq-item {
+		margin-bottom: 1rem;
+		border: 1px solid #ddd;
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		}
+		
+		.faq-question {
+		background: #f0fdf4;
+		padding: 1.2rem;
+		font-weight: 600;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: var(--transition);
+		color: var(--secondary);
+		}
+	
+		.faq-question:hover {
+		background: #dcfce7;
+		}
+		
+		.faq-answer {
+		padding: 0 1.2rem;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease, padding 0.3s ease;
+		background: white;
+		}
+		
+		.faq-item.active .faq-answer {
+		padding: 1.2rem;
+		max-height: 500px;
+		}
+		
+		footer {
+			text-align: center;
+			padding: 2rem 0;
+			color: var(--gray);
+			font-size: 0.95rem;
+			margin-top: 2rem;
+			border-top: 1px solid #eee;
+		}
+	
+		.naver-types {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		margin: 1.5rem 0;
+		}
+		
+		.type-card {
+		flex: 1;
+		min-width: 200px;
+		background: #f8fafc;
+		border: 1px solid #e2e8f0;
+		border-radius: var(--border-radius);
+		padding: 1.2rem;
+		text-align: center;
+		transition: var(--transition);
+		}
+		
+		.type-card:hover {
+		border-color: var(--primary);
+		transform: translateY(-3px);
+		box-shadow: var(--box-shadow);
+		}
+	
+		.type-icon {
+		font-size: 2.5rem;
+		color: var(--primary);
+		margin-bottom: 10px;
+		}
+		
+		@media (max-width: 768px) {
+		.logo {
+		font-size: 2rem;
+		}
+		
+		.hero h1 {
+		font-size: 2.2rem;
+		}
+		
+		.hero p {
+		font-size: 1.1rem;
+		}
+		
+		.card {
+		padding: 1.5rem;
+		}
+		
+		.card-header {
+		flex-direction: column;
+		text-align: center;
+		}
+		
+		.card-header i {
+		margin: 0 0 10px 0;
+		}
+		
+		.step {
+		padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+		}
+	
+		.step::before {
+		left: 10px;
+		top: 18px;
+		}
+		}
+		
+		@media (max-width: 480px) {
+		.logo {
+		font-size: 1.7rem;
+		}
+		
+		.hero {
+		height: 250px;
+		}
+		
+		.hero h1 {
+		font-size: 1.8rem;
+		}
+		
+		.hero p {
+		font-size: 1rem;
+		}
+		
+		.features {
+		grid-template-columns: 1fr;
+		}
+	
+		.step::before {
+		width: 25px;
+		height: 25px;
+		font-size: 0.8rem;
+		}
+		
+		.download-btn {
+		width: 100%;
+		padding: 12px;
+		}
+		
+		.type-card {
+		min-width: 100%;
+		}
+		}
+		
+        .footer {
+            //background: #212529;
+            //color: white;
+            padding: 10px 10px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color:  var(--dark);
+            text-decoration: none;
+        }
+		
+	</style>
+<div class="container-fluid text-break">
+	<div class="row" style="background: linear-gradient(135deg, #03cf5d 0%, #009cbb 100%);">
+	<div class="row" >
+    <div class="col-sm-2 d-none d-sm-block" >
+    </div>
+	<div class="col-sm-4 align-self-end"  >
+		<a href='https://twittervideodownloaderx.com' style="text-decoration:none"><img  data-src='/static/logo.png' src='/static/pix.jpg' class="img-fluid lazy align-text-bottom" alt='site logo'><span  class='align-text-bottom text-wrap fs-3' style="font-style:italic;color:white;font-family:'Tektur',sans-serif;">Twittervideodownloaderx</span></a>
+    </div>
+	
+	
+	<div class="col-sm-4 d-flex justify-content-end align-items-center" id="webdes">
+			<ul  style='padding-top:25px;color:white'  class="nav nav-tabs" >
+				<li style='display:inline;'><a href='https://twittervideodownloaderx.com' style='text-decoration: none;color:white'>Trang chủ</a>&nbsp;&nbsp;</li>
+	
+				<div class="text-end mb-3">
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+								type="button"
+								id="langDropdown"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+						<i class="fa-solid fa-video"></i>
+						<span>Trình tải video</span>
+						</button>
+				
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+							{{toollistele|safe}}
+						</ul>
+					</div>&nbsp;&nbsp;
+				</div>
+				
+				<div class="text-end mb-3">
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+								type="button"
+								id="langDropdown"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+						<i class="bi bi-globe"></i>
+						<span>🇻🇳 Tiếng Việt</span>
+						</button>
+				
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+							{{langlistele|safe}}
+						</ul>
+					</div>
+				</div>
+			</ul>
+		</div>
+	<div class="col-sm-2" id='langweb' >
+	</div>
+</div>
+<div class="row" >
+    <div class="col-md-2 d-none d-md-block">
+    </div> 
+    <div class="col-md-8"  style="border-width:1px;border-style: solid;background-color:#F5F7FA">
+		<br />
+			<div id='titleweb'  style='text-align:center;color:#2D3E50' >
+				<h1 style='font-family: "Tektur",sans-serif;'>Trình tải Video Naver.com</h1>
+				<p >Tải xuống tất cả video từ trang web Naver miễn phí, nhanh chóng và an toàn - Không cần đăng ký, không quảng cáo làm phiền</p>
+			</div> 
+			<div id='ad' >
+			</div>
+			<div style='text-align:center'>
+			
+			<input type='text' id='mainsource' style='width:80%;display:inline;color:#2D3E50' placeholder="Nhập URL naver.com tại đây" >
+			</div>
+			<div style='text-align:center;color:#2D3E50'>
+			URL ví dụ: https://tv.naver.com/v/91035489
+			</div>
+			<br/>
+			<div style='text-align:center'>
+			
+			<button type="button" class="btn" id='bigbutton' style='background-color:#FF6B35;color:white'><i class="bi bi-download"></i> Tải Video</button> 
+			
+			</div>
+			<br/>
+			
+			<div class="spinner-grow text-primary text-center" role="status" style='display:none;font-size:3em' id='loader'>
+				<span class="visually-hidden">Đang tải xuống...</span>
+			</div>
+			
+			<div class=""  id='hashshow' style='color:#2D3E50'>
+			</div> 
+			<br />
+	</div>
+	<div class="col-md-2 d-none d-md-block">
+	</div>
+</div>
+<div class="row" >
+	<p>&nbsp;<span>{% csrf_token %}</span></p>
+</div>
+</div>
+
+<div class="row" style='margin-top:3em;background-color:#F5FAFB'>
+	<div class="col-sm-2 d-none d-md-block">
+	</div> 
+	<div class="col-sm-8"  >
+	
+	
+
+
+		<div class="container">
+		
+		
+		<div class="card">
+		<div class="card-header">
+		<i class="fas fa-info-circle"></i>
+		<h2>Giới thiệu công cụ</h2>
+		</div>
+		<p>Lưu các video Naver TV, V LIVE, tin tức và giải trí yêu thích của bạn vào thiết bị để xem ngoại tuyến mọi lúc, mọi nơi</p>
+		<p>Trình tải video Naver là một công cụ trực tuyến chuyên nghiệp, được thiết kế riêng cho nội dung video từ nền tảng Naver Hàn Quốc. Thông qua công cụ này, bạn có thể dễ dàng tải xuống các loại video trên Naver bao gồm Naver TV, phát lại trực tiếp V LIVE, bản tin, chương trình giải trí, v.v. mà không cần cài đặt bất kỳ phần mềm hay tiện ích bổ sung nào.</p>
+		
+		<div class="warning">
+		<h3><i class="fas fa-exclamation-triangle"></i> Tuyên bố pháp lý quan trọng</h3>
+		<p>Công cụ này chỉ dành cho mục đích học tập và nghiên cứu cá nhân. Vui lòng tuân thủ nghiêm ngặt các quy định pháp luật về bản quyền của Hàn Quốc và quốc gia nơi bạn sinh sống. Nội dung video đã tải xuống chỉ được sử dụng cho mục đích cá nhân, không được sử dụng cho mục đích thương mại, truyền thông công cộng hoặc bất kỳ hành vi vi phạm bản quyền nào. Chúng tôi không chịu trách nhiệm về hành vi của người dùng khi sử dụng công cụ này, vui lòng sử dụng hợp pháp và hợp lý. Việc sử dụng công cụ này đồng nghĩa với việc bạn đồng ý tuân thủ các điều khoản dịch vụ của Naver.</p>
+		</div>
+		
+		<h3 style="margin: 1.5rem 0 1rem; color: var(--secondary);">Các loại video Naver hỗ trợ:</h3>
+		<div class="naver-types">
+		<div class="type-card">
+		<div class="type-icon">
+		<i class="fas fa-tv"></i>
+		</div>
+		<h3>Naver TV</h3>
+		<p>Hỗ trợ tải xuống tất cả nội dung video trên nền tảng Naver TV, bao gồm các chương trình gốc, phim điện ảnh và phim truyền hình</p>
+		</div>
+		<div class="type-card">
+		<div class="type-icon">
+		<i class="fas fa-heart"></i>
+		</div>
+		<h3>V LIVE</h3>
+		<p>Tải xuống đầy đủ các video phát lại trực tiếp, nội dung dành cho fan và video độc quyền của nghệ sĩ trên nền tảng V LIVE</p>
+		</div>
+		<div class="type-card">
+		<div class="type-icon">
+		<i class="fas fa-bolt"></i>
+		</div>
+		<h3>Video Tin tức</h3>
+		<p>Dễ dàng lưu các báo cáo video, chương trình chuyên đề và nội dung phỏng vấn từ Naver News</p>
+		</div>
+		<div class="type-card">
+		<div class="type-icon">
+		<i class="fas fa-play-circle"></i>
+		</div>
+		<h3>Nội dung khác</h3>
+		<p>Hỗ trợ nội dung video Naver được nhúng trong Naver Blog, Cafe và các dịch vụ khác</p>
+		</div>
+		</div>
+
+		<div class="features">
+		<div class="feature-item">
+		<h3><i class="fas fa-bolt"></i> Tải xuống một chạm</h3>
+		<p>Chỉ cần sao chép URL video, nhấn phân tích là có thể tải xuống ngay lập tức, thao tác đơn giản và trực quan</p>
+		</div>
+		<div class="feature-item">
+		<h3><i class="fas fa-shield-alt"></i> 100% An toàn</h3>
+		<p>Không thu thập dữ liệu cá nhân, không lưu trữ nội dung tải xuống, tất cả quá trình xử lý được thực hiện trên trình duyệt</p>
+		</div>
+		<div class="feature-item">
+		<h3><i class="fas fa-mobile-alt"></i> Hỗ trợ đa thiết bị</h3>
+		<p>Tương thích hoàn hảo với PC, Mac, iOS và Android, giúp bạn tải video mọi lúc mọi nơi</p>
+		</div>
+		<div class="feature-item">
+		<h3><i class="fas fa-file-video"></i> Đa dạng định dạng</h3>
+		<p>Hỗ trợ nhiều định dạng như MP4, WEBM, có thể chọn các độ phân giải khác nhau (1080p/720p/480p)</p>
+		</div>
+		<div class="feature-item">
+		<h3><i class="fas fa-headphones"></i> Trích xuất âm thanh</h3>
+		<p>Có thể trích xuất riêng âm thanh từ video và lưu dưới định dạng MP3, phù hợp cho âm nhạc và podcast</p>
+		</div>
+		<div class="feature-item">
+		<h3><i class="fas fa-language"></i> Hỗ trợ đa ngôn ngữ</h3>
+		<p>Giao diện hỗ trợ tiếng Hàn, tiếng Trung, tiếng Anh và nhiều ngôn ngữ khác, thuận tiện cho người dùng toàn cầu</p>
+		</div>
+		</div>
+		</div>
+
+		<div class="card">
+		<div class="card-header">
+		<i class="fas fa-book-open"></i>
+		<h2>Hướng dẫn sử dụng chi tiết</h2>
+		</div>
+		<p>Dưới đây là hướng dẫn các bước hoàn chỉnh để sử dụng trình tải video Naver. Hoàn toàn không cần đăng ký hay cài đặt phần mềm!</p>
+		
+		<div class="tutorial-steps">
+		<div class="step">
+		<h3>Bước 1: Tìm và mở trang video Naver</h3>
+		<p>Truy cập trang web Naver (www.naver.com) trong trình duyệt, tìm kiếm hoặc điều hướng đến nội dung video bạn muốn tải xuống. Đó có thể là Naver TV, V LIVE, tin tức hoặc các trang khác có chứa video. Nhấn để phát video và đảm bảo video được tải đầy đủ.</p>
+		<p><strong>Gợi ý:</strong> Đảm bảo bạn có quyền xem video đó, một số nội dung trả phí hoặc dành riêng cho hội viên có thể không tải được.</p>
+		
+		</div>
+		
+		<div class="step">
+		<h3>Bước 2: Lấy URL trang video</h3>
+		<p>Trên thanh địa chỉ trình duyệt, nhấp vào vùng URL và chọn tất cả (Ctrl+A hoặc Cmd+A), sau đó sao chép (Ctrl+C hoặc Cmd+C). Vui lòng đảm bảo bạn sao chép URL đầy đủ của trang chứa video, không phải URL iframe của trình phát video.</p>
+		<p><strong>Ví dụ URL đúng:</strong> https://tv.naver.com/v/1234567 hoặc https://vlive.tv/video/123456</p>
+		<p><strong>Ví dụ URL sai:</strong> https://serviceapi.naver.com/... (Loại liên kết API này không thể sử dụng)</p>
+		
+		</div>
+
+		<div class="step">
+		<h3>Bước 3: Dán URL và phân tích</h3>
+		<p>Quay lại trang tải xuống này, dán URL vừa sao chép vào ô nhập dữ liệu phía trên (Ctrl+V hoặc Cmd+V). Nhấn nút "Phân tích video", hệ thống sẽ tự động phân tích thông tin video, bao gồm các tùy chọn độ phân giải và định dạng có sẵn.</p>
+		<p><strong>Lưu ý:</strong> Quá trình phân tích thường mất từ 5-15 giây, tùy thuộc vào kích thước video và tốc độ phản hồi của máy chủ. Vui lòng kiên nhẫn đợi, không nhấn nút nhiều lần.</p>
+		<div style="background:#ecfdf5; padding:15px; border-radius:8px; margin:15px 0; text-align:center;">
+		<div style="background:white; display:inline-block; width:100%; max-width:500px; padding:12px; border-radius:6px; margin:0 auto; border:1px solid #bbf7d0;">
+		<input type="text" value="https://tv.naver.com/v/1234567" style="width:70%; padding:8px; border:1px solid #ddd; border-radius:4px;">
+		<button style="background:var(--primary); color:white; border:none; padding:8px 15px; border-radius:4px; cursor:pointer; font-weight:bold;">Phân tích video</button>
+		</div>
+		</div>
+		</div>
+
+		<div class="step">
+		<h3>Bước 4: Chọn định dạng và tải xuống</h3>
+		<p>Sau khi phân tích thành công, bạn sẽ thấy thông tin chi tiết của video, bao gồm tiêu đề, thời lượng, độ phân giải có sẵn và tùy chọn định dạng. Chọn cài đặt bạn cần (khuyên dùng định dạng MP4, độ phân giải 1080p), sau đó nhấn nút "Tải xuống". Trình duyệt sẽ tự động bắt đầu tải tệp video.</p>
+		<p><strong>Gợi ý:</strong> Tải tệp lớn có thể mất một chút thời gian, tùy thuộc vào tốc độ mạng của bạn. Vui lòng giữ trang web mở trong quá trình tải xuống, không đóng trình duyệt.</p>
+		<div style="text-align:center; margin:15px 0;">
+		<div style="display:inline-block; background:#f0fdf4; border:2px solid var(--primary); border-radius:8px; padding:20px; max-width:500px;">
+		<div style="font-weight:bold; color:var(--secondary); margin-bottom:10px; font-size:1.1rem;">"Hướng dẫn nhảy K-pop hot - BTS"</div>
+		<div style="margin:15px 0; text-align:left; padding:0 10px;">
+		<div style="margin-bottom:8px;"><strong>Thông tin video:</strong> Thời lượng 8:24 | Dung lượng 245MB</div>
+		<div style="margin-bottom:15px;">
+		<strong>Chọn chất lượng:</strong><br>
+		<label style="display:block; margin:5px 0;"><input type="radio" name="quality" checked> 1080p (Tốt nhất) - 245MB</label>
+		<label style="display:block; margin:5px 0;"><input type="radio" name="quality"> 720p (Tiêu chuẩn) - 142MB</label>
+		<label style="display:block; margin:5px 0;"><input type="radio" name="quality"> 480p (Di động) - 86MB</label>
+		<label style="display:block; margin:5px 0; padding-top:10px;"><input type="checkbox"> Chỉ trích xuất âm thanh (MP3) - 18MB</label>
+		</div>
+		</div>
+		<button class="download-btn" style="background:#108740; width:auto; color:white;"><i class="fas fa-download"></i> Tải xuống video</button>
+		</div>
+		</div>
+		</div>
+		</div>
+
+		<div class="warning" style="margin-top:2rem;">
+		<h3><i class="fas fa-tools"></i> Giải quyết các vấn đề thường gặp</h3>
+		<p><strong>Vấn đề:</strong> Phân tích thất bại hoặc hiển thị "Không tìm thấy video"</p>
+		<p><strong>Giải pháp:</strong> 1) Xác nhận URL có chính xác không; 2) Thử làm mới trang video Naver sau đó sao chép lại URL; 3) Kiểm tra video có bị giới hạn khu vực không; 4) Đảm bảo video không phải nội dung dành riêng cho hội viên hoặc trả phí</p>
+		
+		<p style="margin-top:10px;"><strong>Vấn đề:</strong> Tốc độ tải chậm hoặc bị gián đoạn</p>
+		<p><strong>Giải pháp:</strong> 1) Chọn độ phân giải thấp hơn; 2) Sử dụng kết nối mạng ổn định; 3) Thử sử dụng trình duyệt khác; 4) Giảm số lượng video tải xuống cùng lúc</p>
+		</div>
+		</div>
+
+		<div class="card faq">
+		<div class="card-header">
+		<i class="fas fa-question-circle"></i>
+		<h2>Câu hỏi thường gặp (FAQ)</h2>
+		</div>
+		
+		<div class="faq-item">
+		<div class="faq-question">
+		<span>Q: Công cụ này có hỗ trợ nội dung trả phí của V LIVE không?</span>
+		<i class="fas fa-chevron-down"></i>
+		</div>
+		<div class="faq-answer">
+		<p>A: Không hỗ trợ. Công cụ này chỉ có thể tải xuống các nội dung video mà bạn có thể xem miễn phí bình thường trên trình duyệt. Nội dung trả phí, nội dung dành riêng cho hội viên hoặc video được bảo vệ bởi DRM không thể tải xuống. Vui lòng tôn trọng bản quyền của người sáng tạo nội dung và điều khoản dịch vụ của Naver.</p>
+		</div>
+		</div>
+		
+		<div class="faq-item">
+		<div class="faq-question">
+		<span>Q: Video tải xuống có bị giới hạn sử dụng không?</span>
+		<i class="fas fa-chevron-down"></i>
+		</div>
+		<div class="faq-answer">
+		<p>A: Tệp video đã tải xuống không có bất kỳ hạn chế kỹ thuật nào và có thể phát tự do. Tuy nhiên, vui lòng lưu ý các hạn chế pháp lý: Nội dung tải xuống chỉ dành cho mục đích xem cá nhân, không được tự ý tải lên lại, chia sẻ, bán hoặc sử dụng cho mục đích thương mại. Chúng tôi khuyên bạn nên tôn trọng bản quyền của tác giả gốc và chỉ sử dụng nội dung trong phạm vi cho phép hợp lý.</p>
+		</div>
+		</div>
+
+		<div class="faq-item">
+		<div class="faq-question">
+		<span>Q: Tại sao một số video trong Naver Blog không thể tải xuống?</span>
+		<i class="fas fa-chevron-down"></i>
+		</div>
+		<div class="faq-answer">
+		<p>A: Naver Blog có thể chứa các video nhúng từ các nền tảng khác nhau (như YouTube, Twitch, v.v.) mà không chỉ giới hạn ở video của chính Naver. Công cụ này chỉ hỗ trợ các nội dung video gốc của nền tảng Naver. Nếu video trong blog đến từ nền tảng khác, bạn cần sử dụng công cụ tải xuống tương ứng của nền tảng đó. Ngoài ra, một số tác giả blog có thể thiết lập các biện pháp chống tải xuống, điều này cũng dẫn đến việc tải xuống thất bại.</p>
+		</div>
+		</div>
+		
+		<div class="faq-item">
+		<div class="faq-question">
+		<span>Q: Làm thế nào để sử dụng công cụ này trên điện thoại?</span>
+		<i class="fas fa-chevron-down"></i>
+		</div>
+		<div class="faq-answer">
+		<p>A: Truy cập trang web này bằng trình duyệt di động và thực hiện theo các bước tương tự. Sau khi sao chép URL trang video Naver, chuyển sang trang công cụ này để dán và phân tích. Sau khi tải xuống hoàn tất, video sẽ được lưu vào thư mục "Tải về" (Downloads) trên điện thoại. Một số trình duyệt di động có thể hỏi vị trí lưu, bạn có thể chọn thư mục phù hợp. Đối với thiết bị iOS, bạn có thể cần sử dụng ứng dụng "Tệp" (Files) để quản lý các video đã tải xuống.</p>
+		</div>
+		</div>
+
+		<div class="faq-item">
+		<div class="faq-question">
+		<span>Q: Phải làm gì nếu tốc độ tải xuống chậm?</span>
+		<i class="fas fa-chevron-down"></i>
+		</div>
+		<div class="faq-answer">
+		<p>A: Tốc độ tải xuống bị ảnh hưởng bởi nhiều yếu tố: 1) Tốc độ kết nối mạng của bạn; 2) Kích thước tệp video; 3) Tải lượng máy chủ hiện tại. Gợi ý: 1) Chọn phiên bản độ phân giải thấp hơn; 2) Tải xuống vào thời điểm tình trạng mạng tốt; 3) Đóng các ứng dụng khác đang chiếm băng thông; 4) Thử sử dụng máy tính thay vì điện thoại để tải tệp lớn; 5) Cập nhật trình duyệt lên phiên bản mới nhất để có hiệu suất tốt nhất.</p>
+		</div>
+		</div>
+		</div>
+		
+		
+			<div class="card">
+					<div class="type-card" style='background-color:#f0fdf4'>
+							<p>© {{year_string}} Naver Video Downloader | Công cụ này không liên kết với Tập đoàn Naver và chỉ phục vụ cho mục đích nghiên cứu kỹ thuật. Bảo lưu mọi quyền.</p>
+							<p>Tuyên bố miễn trừ trách nhiệm: Công cụ này chỉ cung cấp dịch vụ phân tích kỹ thuật và không lưu trữ, lưu giữ hoặc phân phối bất kỳ nội dung video nào. Mọi hành vi tải xuống phải tuân thủ luật pháp địa phương, các quy định và điều khoản dịch vụ của Naver. Chúng tôi không chịu trách nhiệm cho bất kỳ hành vi vi phạm bản quyền nào.
+							</p>
+							
+							<a href="/privacy-policy" style='color: var(--dark)'><b>Chính sách bảo mật</a></b> | 
+							<a href="/terms-of-service" style='color: var(--dark)'><b>Điều khoản dịch vụ</a></b> | 
+							<a href="/about-us" style='color: var(--dark)'><b>Về chúng tôi</b></a> | 
+							<a href="/contact-us" style='color: var(--dark)'><b>Liên hệ</b></a>
+							</p>
+							<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+								Công cụ này chỉ dành cho mục đích học tập và nghiên cứu cá nhân. Người dùng hoàn toàn chịu trách nhiệm pháp lý đối với hành động của mình.
+							</p>
+							<p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+								Việc tải xuống nội dung có bản quyền có thể vi phạm luật pháp và quy định liên quan. Vui lòng tuân thủ luật pháp địa phương của bạn.
+							</p>
+					</div>
+				</div>
+		
+		</div>
+
+
+
+	</div>
+	<div class="col-sm-2 d-none d-md-block">
+	</div>
+</div>
+</div>
+<script src="/static/jquery.min.js"  crossorigin="anonymous"></script>
+<script src="/static/popper.min.js"  crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-3339068484857413" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="/static/jquery.lazy.min.js"></script>
+
+<script type="text/javascript" src="/static/shareon.iife.js" defer  init></script>
+<script>
+	$(function() {
+		$('.lazy').Lazy();
+	});
+</script>
+<script type="application/ld+json">
+	{
+	"@context": "http://schema.org/",
+	"@type": "Organization",
+	"url": "https://twittervideodownloaderx.com",
+	"logo": "https://twittervideodownloaderx.com/static/logo.png"
+	}
+</script>
+
+<script>
+function mp3turn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#mp3placeholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#mp3placeholder').append(spinner+'<br />Converting Video to Mp3</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getmp3', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#mp3placeholder').html('NO result');
+				return;
+				}
+			var mp3filepath=response.mp3filepath;
+			//alert(htimage);
+			$('#mp3placeholder').empty();
+			var intext='';
+			var intext='<a href="/'+mp3filepath+'" target="_blank" class="btn btn-danger">Download Video Mp3</a>';
+			$('#mp3placeholder').html(intext);
+			}
+		else{
+			$('#mp3placeholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+function gifturn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#gifplaceholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#gifplaceholder').append(spinner+'<br />Converting Video to Gif</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getgif', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#gifplaceholder').html('NO result');
+				return;
+				}
+			var giffilepath=response.giffilepath;
+			//alert(htimage);
+			$('#gifplaceholder').empty();
+			var intext='';
+			var intext='<a href="/'+giffilepath+'" target="_blank" class="btn btn-danger">Download Video GIF</a>';
+			$('#gifplaceholder').html(intext);
+			}
+		else{
+			$('#gifplaceholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+$(document).ready(function() {
+$("#mainsource").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#bigbutton").click();
+    }
+});
+$('#bigbutton').on('click',function(){
+	var inputvalue = $('#mainsource').val();
+	if (inputvalue==='')
+	{
+		return false;
+	}
+	$('#hashshow').empty();
+	var spinner='<div style="text-align:center;"><span style="font-size:1.5em;"><span style="background-color:#007FFF;" class="spinner-loader" ></span>';
+	$('#hashshow').append(spinner+'<br />Đang lấy dữ liệu video</span></div>');
+	
+	//document.getElementById("loader").style.display = "block";
+
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getitem_naver', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			document.getElementById("loader").style.display = "none";
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#hashshow').html('NO result');
+				return;
+				}
+				
+				
+				
+				
+				
+				var v_thumbnail=encodeURI(response.v_thumbnail);
+				
+				var v_title=response.v_title;
+				var v_webpage_url=encodeURI(response.v_webpage_url);
+				var v_duration_string=response.v_duration_string;
+				var v_uploader=response.v_uploader;
+				var v_uploader_url=encodeURI(response.v_uploader_url)
+				var v_upload_date=response.v_upload_date;
+				var v_view_count=response.v_view_count;
+				
+				
+				var v_like_count=response.v_like_count;
+				var v_comment_count=response.v_comment_count;
+				var v_ext=response.v_ext;
+				var v_width=response.v_width;
+				var v_height=response.v_height;
+				var v_resolution=response.v_resolution;
+				var v_aspect_ratio=response.v_aspect_ratio;
+				
+				var v_des=response.v_des;
+
+				var v_formats = response.formatslist;
+				var v_thumbnails = response.thumbnailslist;
+			
+
+			$('#hashshow').empty();
+			var intext='';
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>'+v_title+'</b></div><div><img src="'+v_thumbnail+'"  class="img-fluid" /></div>';
+			
+
+			var intext=intext+'</div><div class="col-sm-6 align-self-end" ><br /><br />';
+			
+			for (let i = 0; i < v_formats.length; i++) {
+			
+				turl=encodeURI(v_formats[i][0]);
+				tres=v_formats[i][1];
+				// Dịch: Tải video (độ phân giải ...)
+				var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+turl+'">Tải video (độ phân giải '+tres+')</a></div>';
+			}
+			
+			
+			var intext=intext+'<br />'
+			for (let i = 0; i < v_thumbnails.length; i++) {
+			
+				turl=encodeURI(v_thumbnails[i][0]);
+				tres=v_thumbnails[i][1];
+				// Dịch: Tải ảnh thu nhỏ (độ phân giải ...)
+				var intext=intext+'<div><i class="bi bi-file-image"></i> <a style="text-decoration:none" href="'+turl+'">Tải ảnh thu nhỏ (độ phân giải '+tres+')</a></div>';
+			}
+			
+			
+			
+			var intext=intext+'</div></div><hr />';
+	
+			// Dịch các nhãn thông tin video
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>Tiêu đề: </b>'+v_title+'</div><div><b>URL trang web: </b>'+v_webpage_url+'</div><div><b>Thời lượng: </b>'+v_duration_string+'</div><div><b>Người đăng: </b>'+v_uploader+'</div><div><b>URL người đăng: </b>'+v_uploader_url+'</div><div><b>Ngày đăng: </b>'+v_upload_date+'</div><div><b>Lượt xem: </b>'+v_view_count+'</div></div>';
+	
+			var intext=intext+'<div class="col-sm-6" ><div><b>Lượt thích: </b>'+v_like_count+'</div><div><b>Số bình luận: </b>'+v_comment_count+'</div><div><b>Định dạng: </b>'+v_ext+'</div><div><b>Chiều rộng: </b>'+v_width+'</div><div><b>Chiều cao: </b>'+v_height+'</div><div><b>Độ phân giải: </b>'+v_resolution+'</div><div><b>Tỷ lệ khung hình: </b>'+v_aspect_ratio+'</div></div></div>';
+
+
+			var intext=intext+'<div class="row" ><div class="col-sm-12" ><div><b>Mô tả: </b>'+v_des+'</div></div></div>';
+
+
+			var intext=intext+'<div class="row" >'+'<div class="shareon shadow bg-light bg-gradient"><a class="facebook" data-title="'+v_title+'" ><span  style="font-size:1em">facebook</span></a><a class="linkedin" data-title="'+v_title+'" ><span style="font-size:1em">linkedin</span></a>	<a class="mastodon" data-title="'+v_title+'"><span  style="font-size:1em">mastodon</span></a><a class="messenger" data-fb-app-id="0123456789012345" data-title="'+v_title+'"><span  style="font-size:1em">messenger</span></a><a class="pinterest" data-title="'+v_title+'"><span  style="font-size:1em“>pinterest</span></a><a class="reddit" data-title="'+v_title+'"><span  style="font-size:0.5em">reddit</span></a><a class="telegram" data-title="'+v_title+'"><span  style="font-size:1em">telegram</span></a><a class="twitter" data-title="'+v_title+'"><span  style="font-size:1em“>twitter</span></a><a class="viber" data-title="'+v_title+'"><span  style="font-size:1em">viber</span></a><a class="vkontakte" data-title="'+v_title+'"><span  style="font-size:1em">vkontakte</span></a><a class="whatsapp" data-title="'+v_title+'"><span  style="font-size:1em">whatsapp</span></a></div>';
+			
+			
+			var intext=intext+'</div>';
+			
+			//$('#hashshow').append('<div>'+'<img src="'+htsimage+'" />'+'</div>'+'<p>'+trunttext+'</p>');
+			$('#hashshow').html(intext);
+			}
+		else{
+			document.getElementById("loader").style.display = "none";
+			$('#hashshow').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('.droplang').click(function(e) {
+    e.preventDefault();
+    var selectedValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	if (selectedValue==='en')
+	{
+		window.location=domainname+'/{{baseurlstring}}';
+	}
+	else
+	{
+	window.location=domainname+'/{{baseurlstring}}_'+selectedValue;
+	}
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function() {
+  $('.droptool').click(function(e) {
+    e.preventDefault();
+    var selectedtoolValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	var current_lang='{{lang}}';
+	
+	if (selectedtoolValue==='x_twitter')
+	{
+		if (current_lang==='en')
+			{
+			window.location=domainname;
+			}
+		else
+			{
+			window.location=domainname+'/'+current_lang;
+			}
+	}
+	else
+	{
+		if (current_lang==='en')
+		
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader';
+			}
+		else
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader_'+'{{lang}}';
+			}
+	}
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+var sc_project=11698515; 
+var sc_invisible=1; 
+var sc_security="38970939"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+
+<link  rel="stylesheet" href='/static/wait.css' >
+</body>
+</html>
